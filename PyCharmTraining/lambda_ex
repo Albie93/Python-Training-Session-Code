@@ -1,0 +1,27 @@
+#map
+def disc(p):
+    return p-10
+
+l = [100,200,300,400]
+out = map(disc, l)
+print(list(out))
+
+#filter
+def filt(p):
+    return p>100 and p<400
+
+out = filter(filt, l)
+print(list(out))
+
+#lambda is a function which dosent have a name. It strats with lambda.
+
+out1 = map(lambda p: p-10, l)
+print(list(out1))
+out2 = filter(lambda p: p>100 and p<400 , l)
+print(list(out2))
+
+m = [lambda a,b: a+b , lambda a,b: a-b]
+r1 = m[0](10,20)
+r2 = m[1](10,20)
+
+print('r1 =', r1, 'r2 =', r2)
